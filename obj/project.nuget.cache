@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "dgSpecHash": "0xEARZkSGw4=",
+  "success": true,
+  "projectFilePath": "/home/stephane/Desktop/Internship/Code/Week-6-Project/Week6/Week6.csproj",
+  "expectedPackageFiles": [
+    "/home/stephane/.nuget/packages/aspnetcore.healthchecks.sqlserver/9.0.0/aspnetcore.healthchecks.sqlserver.9.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/dapper/2.1.79/dapper.2.1.79.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.aspnetcore.openapi/10.0.9/microsoft.aspnetcore.openapi.10.0.9.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.bcl.cryptography/9.0.13/microsoft.bcl.cryptography.9.0.13.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.data.sqlclient/7.0.2/microsoft.data.sqlclient.7.0.2.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.data.sqlclient.extensions.abstractions/7.0.2/microsoft.data.sqlclient.extensions.abstractions.7.0.2.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.data.sqlclient.internal.logging/7.0.2/microsoft.data.sqlclient.internal.logging.7.0.2.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.data.sqlclient.sni.runtime/6.0.2/microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.extensions.caching.stackexchangeredis/10.0.9/microsoft.extensions.caching.stackexchangeredis.10.0.9.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.extensions.dependencymodel/10.0.0/microsoft.extensions.dependencymodel.10.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.extensions.diagnostics.healthchecks/10.0.9/microsoft.extensions.diagnostics.healthchecks.10.0.9.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.identitymodel.abstractions/8.16.0/microsoft.identitymodel.abstractions.8.16.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.16.0/microsoft.identitymodel.jsonwebtokens.8.16.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.identitymodel.logging/8.16.0/microsoft.identitymodel.logging.8.16.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.identitymodel.protocols/8.16.0/microsoft.identitymodel.protocols.8.16.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/8.16.0/microsoft.identitymodel.protocols.openidconnect.8.16.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.identitymodel.tokens/8.16.0/microsoft.identitymodel.tokens.8.16.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/microsoft.sqlserver.server/1.0.0/microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "/home/stephane/.nuget/packages/serilog/4.3.0/serilog.4.3.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/serilog.aspnetcore/10.0.0/serilog.aspnetcore.10.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/serilog.extensions.hosting/10.0.0/serilog.extensions.hosting.10.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/serilog.extensions.logging/10.0.0/serilog.extensions.logging.10.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/serilog.formatting.compact/3.0.0/serilog.formatting.compact.3.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/serilog.settings.configuration/10.0.0/serilog.settings.configuration.10.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/serilog.sinks.console/6.1.1/serilog.sinks.console.6.1.1.nupkg.sha512",
+    "/home/stephane/.nuget/packages/serilog.sinks.debug/3.0.0/serilog.sinks.debug.3.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/serilog.sinks.file/7.0.0/serilog.sinks.file.7.0.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/stackexchange.redis/2.7.27/stackexchange.redis.2.7.27.nupkg.sha512",
+    "/home/stephane/.nuget/packages/system.configuration.configurationmanager/9.0.13/system.configuration.configurationmanager.9.0.13.nupkg.sha512",
+    "/home/stephane/.nuget/packages/system.identitymodel.tokens.jwt/8.16.0/system.identitymodel.tokens.jwt.8.16.0.nupkg.sha512",
+    "/home/stephane/.nuget/packages/system.security.cryptography.pkcs/9.0.13/system.security.cryptography.pkcs.9.0.13.nupkg.sha512",
+    "/home/stephane/.nuget/packages/system.security.cryptography.protecteddata/9.0.13/system.security.cryptography.protecteddata.9.0.13.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.Extensions.Diagnostics.HealthChecks will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "/home/stephane/Desktop/Internship/Code/Week-6-Project/Week6/Week6.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/stephane/Desktop/Internship/Code/Week-6-Project/Week6/Week6.csproj",
+      "libraryId": "Microsoft.Extensions.Diagnostics.HealthChecks",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "/home/stephane/Desktop/Internship/Code/Week-6-Project/Week6/Week6.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/stephane/Desktop/Internship/Code/Week-6-Project/Week6/Week6.csproj",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
