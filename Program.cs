@@ -1,14 +1,22 @@
 using Week6.Middleware;
+using Week6.Services;
 using Week6.Services.Email;
 using Week6.Services.Cleanup;
 using Week6.HealthChecks;
 using Week6.Services.Reports;
+using Microsoft.EntityFrameworkCore;
+using Week6.Data;
+using Week6.Caching;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddSingleton<IOrderProcessingQueue, OrderProcessingQueue>();
+builder.Services.AddHostedService<OrderProcessingBackgroundService>();
 
 builder.Services.AddSingleton<IEmailQueue, EmailQueue>();
 builder.Services.AddHostedService<EmailProcessingBackgroundService>();
@@ -17,12 +25,30 @@ builder.Services.AddHostedService<DataCleanupBackgroundService>();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddHealthChecks()
-    .AddSqlServer(builder.Configuration.GetConnectionString("Default") ?? "Server=.;Database=Week6;Trusted_Connection=True;TrustServerCertificate=True;",
-        name: "sqlserver")
+    .AddSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")!, name: "sqlserver")
     .AddCheck<FileSystemHealthCheck>("filesystem")
     .AddCheck<ExternalApiHealthCheck>("external-api");
 
 builder.Services.AddHostedService<ReportGeneratorBackgroundService>();
+
+builder.Services.AddDbContext<Week6DbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddMemoryCache(); // in-memory layer
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    options.InstanceName = "Week6:";
+});
+
+builder.Services.AddSingleton<ICacheMetrics, CacheMetrics>();
+builder.Services.AddScoped<IProductCacheService, ProductCacheService>();
+
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+builder.Services.AddScoped<IAuditRepository, AuditRepository>();
 
 
 var app = builder.Build();
